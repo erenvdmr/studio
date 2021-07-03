@@ -1,0 +1,13 @@
+.first-input {
+  border: none;
+  border-bottom: 1px solid $gray-color;
+  outline: none;
+  width: 350px;
+  background-color: transparent;
+  padding-bottom: 5px;
+
+  &:focus {
+    color: $dark-color;
+    border-bottom: 1px solid $dark-color;
+  }
+}

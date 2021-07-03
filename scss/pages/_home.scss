@@ -1,0 +1,242 @@
+body {
+  @include page-width;
+  background-color: $white-color;
+}
+
+.container {
+  display: table;
+
+  &__middle {
+    display: table-cell;
+    vertical-align: middle;
+
+    &__items {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-inline: 10vw;
+      width: 100vw;
+      height: 100vh;
+
+      &-left {
+        width: 50%;
+
+        h1 {
+          margin-bottom: 25px;
+        }
+
+        p {
+          margin-bottom: 25px;
+        }
+
+        &-text {
+          margin-bottom: 80px;
+        }
+
+        &-full {
+          display: flex;
+          color: $second-color;
+
+          p {
+            margin-bottom: 10px !important;
+          }
+
+          .text-bar2 {
+            margin-inline: 30px;
+          }
+
+          .ani {
+            cursor: pointer;
+            transition: 0.5s;
+            -moz-transition: 0.5s;
+            -ms-transition: 0.5s;
+            -o-transition: 0.5s;
+            -webkit-transition: 0.5s;
+            &:hover {
+              p {
+                color: $dark-color;
+              }
+            }
+
+            &::after {
+              content: " ";
+              display: block;
+              width: 0;
+              height: 2px;
+              transition: width 0.3s;
+              -webkit-transition: width 0.3s;
+              -moz-transition: width 0.3s;
+              -ms-transition: width 0.3s;
+              -o-transition: width 0.3s;
+            }
+
+            &:hover::after {
+              width: 100px;
+              background-color: $first-color;
+            }
+          }
+        }
+      }
+      &-right {
+        width: 50%;
+      }
+    }
+  }
+}
+
+.about {
+  background-color: $second-color;
+
+  &__content {
+    flex-direction: column;
+    padding-inline: 10vw;
+    padding-block: 5vw;
+
+    &-title {
+      max-width: 450px;
+    }
+
+    &-text {
+      display: flex;
+      margin-top: 50px;
+      justify-content: space-between;
+
+      &-left {
+        width: 45%;
+        font-size: $big-font-size;
+        font-weight: bold;
+
+        p {
+          line-height: 1.5;
+        }
+      }
+
+      &-right {
+        width: 50%;
+
+        span {
+          color: $first-color;
+          cursor: pointer;
+        }
+
+        p {
+          line-height: 1.7;
+        }
+      }
+    }
+  }
+
+  &__team {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
+
+.culture {
+  padding-inline: 10vw;
+
+  &__title {
+    margin-top: 50px;
+  }
+
+  &__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 20px;
+
+    .blog {
+      max-height: 400px;
+      align-self: flex-end;
+      cursor: pointer;
+
+      img {
+        height: 250px;
+        width: 100%;
+        object-fit: cover;
+        transition: 0.3s;
+        -webkit-transition: 0.3s;
+        -moz-transition: 0.3s;
+        -ms-transition: 0.3s;
+        -o-transition: 0.3s;
+        &:hover {
+          transform: scale(1.02);
+          -webkit-transform: scale(1.02);
+          -moz-transform: scale(1.02);
+          -ms-transform: scale(1.02);
+          -o-transform: scale(1.02);
+        }
+      }
+
+      .text {
+        padding-top: 20px;
+      }
+    }
+  }
+}
+
+::selection {
+  color: $first-color;
+  background-color: #c53f3f28;
+}
+
+.contact {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 0;
+  display: none;
+  &__modal {
+    position: absolute;
+    flex-direction: column;
+    max-width: 500px;
+    background-color: $white-color;
+    top: 20%;
+    left: 0;
+    right: 0;
+    margin-inline: auto;
+    padding-block: 50px;
+    box-shadow: 0 5px 10px #0000009d;
+    display: none;
+
+    &-title {
+      max-width: 300px;
+      margin-inline: auto;
+
+      h3 {
+        font-size: $big-font-size;
+        text-align: center;
+      }
+
+      .modal-close {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 24px;
+        cursor: pointer;
+      }
+    }
+    &-content {
+      margin-top: 50px;
+      form {
+        input {
+          margin-block: 15px;
+        }
+      }
+
+      button {
+        background-color: transparent;
+        margin-top: 30px;
+      }
+    }
+  }
+}

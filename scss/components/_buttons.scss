@@ -1,0 +1,48 @@
+.big-button {
+  background-color: transparent;
+  color: $first-color;
+  border: 2px solid $first-color;
+  font-size: $small-font-size;
+  padding: 12px 28px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+
+  &:hover {
+    background-color: $first-color;
+    color: $white-color;
+  }
+}
+
+.medium-button {
+  background-color: transparent;
+  color: $first-color;
+  border: 2px solid $first-color;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
+  padding: 8px 24px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.5s;
+  -webkit-transition: 0.5s;
+  -moz-transition: 0.5s;
+  -ms-transition: 0.5s;
+  -o-transition: 0.5s;
+  font-size: $small-font-size;
+  &:hover {
+    background-color: $first-color;
+    color: $white-color;
+  }
+}

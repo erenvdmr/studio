@@ -1,0 +1,32 @@
+.dark-theme {
+  background-color: $dark-color;
+  color: $white-color;
+
+  button {
+    background-color: transparent;
+  }
+
+  .header {
+    &__nav {
+      &-logo {
+        svg {
+          fill: $white-color;
+        }
+      }
+      &-menu {
+        ul li a {
+          color: $white-color;
+        }
+      }
+    }
+  }
+
+  .about {
+    background-color: $dark-color;
+    border-top: 1px solid $white-color;
+  }
+
+  .footer {
+    border-top: 1px solid $white-color;
+  }
+}
