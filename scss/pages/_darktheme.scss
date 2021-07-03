@@ -21,6 +21,14 @@
     }
   }
 
+  .container {
+    .ani {
+      &:hover {
+        color: $white-color;
+      }
+    }
+  }
+
   .about {
     background-color: $dark-color;
     border-top: 1px solid $white-color;
