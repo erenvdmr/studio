@@ -24,7 +24,9 @@
   .container {
     .ani {
       &:hover {
-        color: $white-color;
+        p {
+          color: $white-color;
+        }
       }
     }
   }
